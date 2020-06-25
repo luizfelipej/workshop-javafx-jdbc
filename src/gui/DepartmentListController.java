@@ -66,9 +66,13 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	public void setDepartmentService(DepartmentService service) {
 		this.service = service;
 	}
-
+	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
+		initializeNode();
+	}
+
+	public void initializeNode() {
 		tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
 		tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
 
